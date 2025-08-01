@@ -1,0 +1,627 @@
+/* Estilização geral do corpo da página */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1em;
+    text-align: center;
+    background-color: #f6ede1;
+    /* bege claro */
+    margin: 0;
+    color: #300a04;
+    /* marrom escuro */
+    line-height: 1.6;
+    /* Ajuste leve */
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    /* Estilos base para cabeçalhos */
+    font-family: 'Georgia', serif;
+    color: #5B3A29;
+    /* Marrom médio */
+    margin-top: 0;
+    /* Remover margem superior padrão */
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    /* Mais sutil */
+    line-height: 1.3;
+}
+
+p {
+    color: #300a04;
+    font-size: 1rem;
+    /* Padronizado */
+    line-height: 1.7;
+    /* Aumentado para leitura */
+    margin-bottom: 15px;
+    text-align: center;
+    /* Manter centralizado para parágrafos curtos */
+    max-width: 750px;
+    /* Levemente ajustado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #b8904e;
+    /* marrom dourado */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #825d3b;
+    /* marrom mais escuro */
+    text-decoration: underline;
+}
+
+
+/* Layout Principal */
+
+.header {
+    /* Container para o título da página */
+    background-color: #b8904e;
+    /* marrom dourado */
+    color: #ffffff;
+    padding: 15px;
+    /* Reduzido */
+    margin-bottom: 25px;
+    /* Reduzido */
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    /* Mais sutil */
+}
+
+.header h1 {
+    /* H1 dentro do .header */
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    /* Reduzido */
+    color: inherit;
+    /* Herda de .header (#ffffff) */
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    letter-spacing: 1px;
+    border-radius: 0;
+    max-width: none;
+    text-shadow: none;
+}
+
+.menu {
+    background-color: #825d3b;
+    /* marrom escuro */
+    padding: 10px;
+    /* Reduzido */
+    margin-bottom: 25px;
+    text-align: center;
+    border-radius: 6px;
+    /* Mais sutil */
+}
+
+.menu:hover {
+    color: black;
+}
+
+.contente {
+    background-color: #f6ede1;
+    /* Mesmo que body, pode ser #fff ou um bege mais claro para contraste */
+    padding: 25px;
+    /* Reduzido */
+    margin: 25px auto;
+    overflow: auto;
+    text-align: center;
+    max-width: 1100px;
+    /* Reduzido */
+    border-radius: 12px;
+    /* Mais sutil */
+    border: 1px solid #d2c0a8;
+}
+
+.footer {
+    background-color: #b8904e;
+    color: #ffffff;
+    padding: 20px;
+    /* Reduzido */
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    /* Mais sutil */
+}
+
+.footer p {
+    /* p.paragf simplificado */
+    color: #ffffff;
+    font-size: 0.95rem;
+    /* Mais sutil para rodapé */
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* Layout de Colunas (para index-1.html) */
+
+.contente_left,
+.contente_center,
+.contente_right {
+    width: calc(33.333% - 20px);
+    /* Ajustado para gap menor */
+    background-color: #e9e0d7;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    /* Gap entre colunas */
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+
+/* Layout em Grid (para fotos.html) */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Ajustado minmax */
+    gap: 20px;
+    /* Reduzido */
+    margin: 25px 0;
+}
+
+
+/* Formulários */
+
+.form-container {
+    /* Principal wrapper para seções de formulário */
+    width: 90%;
+    max-width: 450px;
+    /* Reduzido */
+    margin: 25px auto;
+    padding: 25px;
+    background-color: #fdfaf5;
+    /* Um branco levemente off-white para o form */
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #d2c0a8;
+    box-shadow: 0 5px 15px rgba(48, 10, 4, 0.08);
+    /* Sombra mais sutil */
+}
+
+.form-container h2 {
+    font-family: 'Georgia', serif;
+    color: #5B3A29;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    /* Reduzido */
+}
+
+.form-group {
+    margin-bottom: 18px;
+    /* Reduzido */
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    /* Reduzido */
+    color: #300a04;
+    font-weight: 600;
+    /* Mantido para legibilidade */
+    font-size: 0.95rem;
+    /* Levemente reduzido */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="datetime"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    /* Reduzido */
+    border: 1px solid #d2c0a8;
+    border-radius: 6px;
+    /* Mais sutil */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    /* Fundo branco puro */
+    font-size: 0.95rem;
+    color: #333333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="datetime"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #b8904e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(184, 144, 78, 0.2);
+    /* Sombra de foco mais sutil */
+}
+
+
+/* Botões de Formulário */
+
+.form-group button,
+.form-group input[type="submit"],
+.form-group input[type="reset"],
+.form-group input[type="button"] {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    /* Base para borda */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    min-width: 120px;
+    margin: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.form-group button[type="submit"],
+
+/* Botão primário */
+
+.form-group input[type="submit"] {
+    background-color: #825d3b;
+    /* marrom escuro */
+    color: #ffffff;
+    border-color: #825d3b;
+}
+
+.form-group button[type="submit"]:hover,
+.form-group input[type="submit"]:hover {
+    background-color: #6a4b2a;
+    border-color: #6a4b2a;
+}
+
+.form-group input[type="reset"] {
+    /* Botão secundário/reset */
+    background-color: #f0e6d8;
+    color: #825d3b;
+    border-color: #d2c0a8;
+    /* Borda correspondente ao fundo */
+}
+
+.form-group input[type="reset"]:hover {
+    background-color: #e9e0d7;
+    color: #5B3A29;
+    border-color: #c0b098;
+}
+
+
+/* Links dentro de formulários */
+
+.form-container p {
+    /* Parágrafos dentro do form container */
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #5B3A29;
+}
+
+.form-container p a,
+
+/* Links em parágrafos */
+
+.form-container>a {
+    /* Links diretos filhos do form-container */
+    color: #b8904e;
+    font-weight: 500;
+    /* Removido text-decoration: none, herda de 'a' global */
+}
+
+.form-container p a:hover,
+.form-container>a:hover {
+    color: #825d3b;
+}
+
+.form-container .form-group>a {
+    /* Para links como "Esqueceu a senha?" dentro de um form-group */
+    display: block;
+    /* Para ocupar a linha */
+    text-align: center;
+    /* Centralizar */
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* Imagens */
+
+img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 6px;
+    /* Reduzido */
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(48, 10, 4, 0.1);
+    /* Sombra mais sutil */
+    border: 4px solid #e9e0d7;
+    /* Borda mais sutil */
+    transition: transform 0.25s ease;
+}
+
+img:hover {
+    transform: scale(1.015);
+    /* Efeito de hover mais sutil */
+}
+
+
+/* Links de Destaque (Menu de Navegação Principal) */
+
+a.destaque {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #b8904e;
+    border-radius: 6px;
+    margin: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid transparent;
+    /* Para consistência com outros botões */
+    transition: background-color 0.2s ease;
+}
+
+a.destaque:hover {
+    background-color: #977556;
+}
+
+
+/* Tabelas */
+
+table {
+    font-family: 'Georgia', serif;
+    color: #300a04;
+    margin: 25px auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 850px;
+    /* Reduzido */
+    background-color: #fdfaf5;
+    /* Fundo mais claro para tabela */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Para border-radius em células */
+    box-shadow: 0 3px 8px rgba(48, 10, 4, 0.07);
+    /* Sombra sutil */
+}
+
+td,
+th {
+    border: 1px solid #e0d8cd;
+    /* Borda mais clara */
+    text-align: left;
+    padding: 10px;
+    /* Reduzido */
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #b8904e;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(233, 224, 215, 0.3);
+    /* Listras muito sutis, e.g. #f9f6f2 */
+}
+
+tr:hover {
+    background-color: rgba(184, 144, 78, 0.08);
+    /* Hover mais sutil */
+    transition: background-color 0.15s ease;
+}
+
+
+/* Admin Panel Specific Styles */
+
+.admin-content-menu {
+    background-color: #e9e0d7;
+    border: 1px solid #d2c0a8;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px auto;
+    text-align: left;
+    max-width: 850px;
+}
+
+.admin-content-menu h2 {
+    font-family: 'Georgia', serif;
+    color: #5B3A29;
+    font-size: 1.4rem;
+    /* Reduzido */
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d2c0a8;
+}
+
+.admin-content-menu h2:first-of-type {
+    margin-top: 0;
+}
+
+.admin-content-menu a.destaque {
+    /* Links no menu admin */
+    display: block;
+    margin: 8px 0;
+    padding: 10px 15px;
+    background-color: #825d3b;
+    color: #ffffff;
+    border: none;
+    /* Já tem em a.destaque global, mas pode ser explicitado */
+    text-align: center;
+    border-radius: 6px;
+}
+
+.admin-content-menu a.destaque:hover {
+    background-color: #5B3A29;
+}
+
+
+/* Utility Classes */
+
+.texto {
+    /* Classe para forçar texto branco, útil em botões com fundo escuro */
+    color: #ffffff !important;
+}
+
+
+/* Se um link precisa ser branco: <a class="texto" ...> */
+
+
+/* Se um botão tem um link dentro e o botão tem a classe .texto: */
+
+button.texto a {
+    /* Estilo para links dentro de um botão com classe .texto */
+    color: #ffffff !important;
+    /* Força o link a ser branco */
+    text-decoration: none;
+}
+
+button.texto a:hover {
+    text-decoration: underline;
+    /* Opcional: sublinhar no hover */
+}
+
+
+/* Media Queries (Ajustes para Responsividade) */
+
+
+/* Telas Médias (Tablets) */
+
+@media (max-width: 768px) {
+    body {
+        padding: 0.8em;
+        font-size: 15px;
+        /* Base font size */
+    }
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+    .contente_left,
+    .contente_center,
+    .contente_right {
+        width: calc(50% - 16px);
+        margin: 8px;
+        padding: 15px;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .form-group button,
+    .form-group input[type="submit"],
+    .form-group input[type="reset"] {
+        padding: 9px 18px;
+        font-size: 0.9rem;
+    }
+    a.destaque {
+        padding: 9px 18px;
+        font-size: 0.95rem;
+        margin: 5px;
+    }
+}
+
+
+/* Telas Pequenas (Smartphones) */
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.5em;
+        font-size: 14px;
+        /* Ajuste para telas muito pequenas */
+    }
+    .contente,
+    .form-container,
+    .admin-content-menu {
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        /* Garante centralização se houver padding no body */
+    }
+    .form-container {
+        width: calc(100% - 30px);
+    }
+    /* Ocupar mais espaço */
+    .header {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    .form-container h2 {
+        font-size: 1.3rem;
+    }
+    .admin-content-menu h2 {
+        font-size: 1.2rem;
+    }
+    .contente_left,
+    .contente_center,
+    .contente_right {
+        width: 100%;
+        margin: 8px 0;
+        padding: 15px;
+    }
+    .menu a.destaque,
+    .admin-content-menu a.destaque {
+        display: block;
+        margin: 8px auto;
+        width: calc(100% - 20px);
+        /* Largura ajustada, com padding */
+        padding: 10px;
+    }
+    table,
+    th,
+    td {
+        font-size: 0.8rem;
+    }
+    td,
+    th {
+        padding: 6px 4px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="datetime"],
+    select,
+    textarea {
+        padding: 9px;
+        font-size: 0.9rem;
+    }
+    .form-group button,
+    .form-group input[type="submit"],
+    .form-group input[type="reset"] {
+        width: 100%;
+        margin: 6px 0;
+        padding: 10px;
+        /* Padding uniforme */
+    }
+    img {
+        max-width: 90%;
+        border-width: 3px;
+    }
+}
