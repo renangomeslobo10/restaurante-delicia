@@ -92,4 +92,4 @@ Este projeto foi desenvolvido como parte das aulas de HTML, demonstrando conheci
 
 ---
 
-*Projeto desenvolvido para fins educacionais e de portfólio.* 
+*Este Projeto foi desenvolvido por Renan Gomes Lobo espero que gostem.* 
